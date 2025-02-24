@@ -1,30 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 10, in script
-    show misha right
-Exception: Image 'misha' does not accept attributes 'right'.
+  File "game/script.rpy", line 73, in script
+    $ renpy.pause(renpy.sound.get_duration("sfx/door_kick_down_effect.wav"))
+  File "game/script.rpy", line 73, in <module>
+    $ renpy.pause(renpy.sound.get_duration("sfx/door_kick_down_effect.wav"))
+AttributeError: module 'renpy.audio.sound' has no attribute 'get_duration'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 10, in script
-    show misha right
-  File "/home/alex/Apps/RenPy/renpy/ast.py", line 1117, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "/home/alex/Apps/RenPy/renpy/ast.py", line 1080, in show_imspec
-    renpy.config.show(name,
-  File "/home/alex/Apps/RenPy/renpy/exports/displayexports.py", line 477, in show
-    if not base.find_target() and renpy.config.missing_show:
-  File "/home/alex/Apps/RenPy/renpy/display/image.py", line 421, in find_target
-    self.target = target._duplicate(a)
-  File "/home/alex/Apps/RenPy/renpy/display/displayable.py", line 249, in _duplicate
-    args.extraneous()
-  File "/home/alex/Apps/RenPy/renpy/display/displayable.py", line 109, in extraneous
-    raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'misha' does not accept attributes 'right'.
+  File "game/script.rpy", line 73, in script
+    $ renpy.pause(renpy.sound.get_duration("sfx/door_kick_down_effect.wav"))
+  File "/home/alex/Apps/RenPy/renpy/ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/alex/Apps/RenPy/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 73, in <module>
+    $ renpy.pause(renpy.sound.get_duration("sfx/door_kick_down_effect.wav"))
+AttributeError: module 'renpy.audio.sound' has no attribute 'get_duration'
 
 Linux-6.8.0-53-generic-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.3.4.24120703
 Cerebral_VN_Demo 1.0
-Sun Feb 23 17:59:34 2025
+Sun Feb 23 23:27:22 2025
