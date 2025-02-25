@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 67: play requires a file
-    play movie
-              ^
+File "game/script.rpy", line 108: end of line expected.
+    you "Nu, da ce-o fost ieri?":
+                                ^
+
+File "game/script.rpy", line 114: end of line expected.
+    you "Da, țin minte, ne-am razibit":
+                                      ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Feb 23 23:26:48 2025
+Tue Feb 25 19:21:28 2025
