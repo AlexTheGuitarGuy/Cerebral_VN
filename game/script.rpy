@@ -72,8 +72,9 @@ label start:
 
     # Ovidiu sare la futut
     stop music
-    play movie "video/ovidiu_jump.ogv"
-    $ renpy.pause(8.0)
+    $ result = renpy.movie_cutscene("video/ovidiu_jump.ogv")
+    if result is None:
+        $ renpy.pause(8.0)
 
     # Mișa intră
     play sound "sfx/door_kick_down_effect.wav"
